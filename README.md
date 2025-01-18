@@ -1,8 +1,24 @@
-## Summary:
+# Summary:
 I define what a "valuable tenant" is, i.e., which tenants create the most value, and provide actionable insights for the client company so they can maximize profits, lower costs and increase income-stability.
 
-## Goal to achieve with the data:
-Determine which tenants are valuable
+# Goal to achieve with the data:
+* Predict which tenants are valuable from data provided by tenants themselves and collected by property.
+* Provide actionable insights to increase tenant value for company.
+
+## Define 'Valuable Tenant':
+* Increase profitability rate during occupancy: High payment relative to current market value of the apartment (RENT - market value of rent).
+
+* Minimize unoccupied periods: Longer times of occupancy or leasing periods.
+
+## Valuation:
+
+* The simplest model of tenant value would be to consider just the profit margin (RENT - ASKING_RENT) at the time of signing of the apartment. If we assume that the rent price updates at the rate of increase of the submarket price every new lease term, then this profit margin is constant with time and the value of a tenant will simply be a function of the duration of their stay. Thus, their value scales with the length of their occupancy.
+
+* If the tenants are locked into a RENT price when they first sign their lease, then this profit margin will change with time as the ASKING_RENT price will change for the submarket with time. In submarkets where the ASKING_RENT prices are increasing with time, the profit margin would be decreasing for the tenants that were locked into lower RENT prices with earlier MOVEIN-dates. In this case, there would be a trade-off between the profitability rate and the benefit of longer times of occupancy.
+
+--> Predict which future tenants would be valuable
+Assuming the simpler model above that the profit margin at signing is maintained, then the value of a customer is determined by this initial profitability times the length of their stay. Thus, if we can predict the length of a tenant's stay from the tenant variables, we can predict how valuable they'll be.
+
 
 ## Sources of data:
 * Demoraphical data provided by past tenants -- Income, rent, length of stay, pets, etc.
@@ -184,36 +200,3 @@ Determine which tenants are valuable
         </tr>
     </tbody>
 </table>
-
-# Define 'Valuable Tenant':
-Profitability rate during occupancy: High payment relative to current market value of the apartment (RENT - market value of rent).
-
-Minimize unoccupied periods: Longer times of occupancy or leasing periods.
-
-Valuation:
-
-The simplest model of tenant value would be to consider just the profit margin (RENT - ASKING_RENT) at the time of signing of the apartment. If we assume that the rent price updates at the rate of increase of the submarket price every new lease term, then this profit margin is constant with time and the value of a tenant will simply be a function of the duration of their stay. Thus, their value scales with the length of their occupancy.
-
-If the tenants are locked into a RENT price when they first sign their lease, then this profit margin will change with time as the ASKING_RENT price will change for the submarket with time. In submarkets where the ASKING_RENT prices are increasing with time, the profit margin would be decreasing for the tenants that were locked into lower RENT prices with earlier MOVEIN-dates. In this case, there would be a trade-off between the profitability rate and the benefit of longer times of occupancy.
-
-- Predict which future tenants would be valuable
-Assuming the simpler model above that the profit margin at signing is maintained, then the value of a customer is determined by this initial profitability times the length of their stay. Thus, if we can predict the length of a tenant's stay from the tenant variables, we can predict how valuable they'll be.
-
-
-PCA on genotypes using data from the thousand genomes project and nspired by [this paper](https://www.nature.com/articles/nature07331).
-
-## Preview VCF on 42basepairs
-
-* [Preview variants](https://42basepairs.com/browse/s3/1000genomes/release/20110521?file=ALL.chr22.phase1_release_v3.20101123.snps_indels_svs.genotypes.vcf.gz&preview=variants)
-* [Subsample variants](https://42basepairs.com/browse/s3/1000genomes/release/20110521?file=ALL.chr22.phase1_release_v3.20101123.snps_indels_svs.genotypes.vcf.gz&preview=subsample&loci=22%3A16000000-16100000)
-
-
-## Data files used:
-
-```bash
-# Download from 42basepairs
-wget "https://42basepairs.com/download/s3/1000genomes/release/20110521/ALL.chr22.phase1_release_v3.20101123.snps_indels_svs.genotypes.vcf.gz"
-
-wget "https://42basepairs.com/download/s3/1000genomes/release/20110521/ALL.chr22.phase1_release_v3.20101123.snps_indels_svs.genotypes.vcf.gz.tbi"
-
-wget "https://42basepairs.com/download/s3/1000genomes/release/20110521/phase1_integrated_calls.20101123.ALL.panel"
