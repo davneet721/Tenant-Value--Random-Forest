@@ -1,7 +1,7 @@
 # Summary:
 I define what a "valuable tenant" is, i.e., which tenants create the most value, and provide actionable insights for the client company so they can maximize profits, lower costs and increase income-stability.
 
-# Goal to achieve with the data:
+## Goal to achieve with the data:
 * Predict which tenants are valuable from data provided by tenants themselves and collected by property.
 * Provide actionable insights to increase tenant value for company.
 
