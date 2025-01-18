@@ -21,7 +21,7 @@ Assuming the simpler model above that the profit margin at signing is maintained
 
 
 ## Sources of data:
-I start by categorizing the data according to the source and type. This informs how I use the data to determine or predict tenant value.
+I start by categorizing the client provided data columns according to the source and type. This informs how I use the data to determine or predict tenant value.
 
 * Demoraphical data provided by past tenants -- Income, rent, length of stay, pets, etc.
 * Regional and property determined data -- Submarket asking rent, occupancy rates, etc.
