@@ -1,4 +1,8 @@
-## Summary: I define what a "valuable tenant" is, i.e., which tenants create the most value, and provide actionable insights for the client company so they can maximize profits, lower costs and increase income-stability.
+## Summary:
+I define what a "valuable tenant" is, i.e., which tenants create the most value, and provide actionable insights for the client company so they can maximize profits, lower costs and increase income-stability.
+
+## Goal to achieve with the data:
+Determine which tenants are valuable
 
 ## Sources of data:
 * Demoraphical data provided by past tenants -- Income, rent, length of stay, pets, etc.
@@ -181,9 +185,7 @@
     </tbody>
 </table>
 
-## Goal to achieve with the data:
-Determine which tenants are valuable
-Define 'Valuable Tenant':
+# Define 'Valuable Tenant':
 Profitability rate during occupancy: High payment relative to current market value of the apartment (RENT - market value of rent).
 
 Minimize unoccupied periods: Longer times of occupancy or leasing periods.
